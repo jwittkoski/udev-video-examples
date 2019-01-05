@@ -1,4 +1,4 @@
-# udev-video-examples
+# udev video examples
 
 Examples of udev rules for video capture devices. I have used these for my SageTV setup, but they are not specific
 to SageTV and could be used as examples for other systems.
