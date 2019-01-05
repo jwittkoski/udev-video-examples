@@ -11,8 +11,8 @@ IR blaster.
 In some cases it was challenging to find a unique udev parameter to identify each device. For the multiple PVR-500s
 I had to map them based on PCI slots (using the KERNELS parameter) which required some experimentation.
 
-For most of these examples you'll need to tweak them for your own setup. You'll likely have to determine and update the examples with one or following for your own setup:
-* What parameters to use to identify your computer's PCI Slots
+For most of these examples you'll need to tweak them for your own setup. You'll likely have to determine and update the examples with one or more of the following for your own setup:
+* The values for the PCI slots your devices are installed in
 * Serial numbers for your device
 
 The rules files (with your customizations) should be placed in `/etc/udev/rules.d`.
