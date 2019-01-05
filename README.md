@@ -13,7 +13,7 @@ I had to map them based on PCI slots (using the KERNELS parameter) which require
 
 For most of these examples you'll need to tweak them for your own setup. You'll likely have to determine and update the examples with one or more of the following for your own setup:
 * The values for the PCI slots your devices are installed in
-* Serial numbers for your device
+* Serial numbers for your devices
 
 The rules files (with your customizations) should be placed in `/etc/udev/rules.d`.
 
