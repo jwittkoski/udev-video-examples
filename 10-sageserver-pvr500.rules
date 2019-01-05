@@ -1,0 +1,76 @@
+#
+# Hauppauge PVR-500 Example
+# This example assumes 3 PVR-500 cards (6 total tuners) are installed.
+# Use the first 2 or 4 sections if you have less than 3 cards.
+# Note: Use "lspci -v" to determine the PCI slot the device is in and update
+# the KERNELS values for each card.
+#
+
+#
+# Hauppauge PVR500
+# PCI Slot (KERNELS=="0000:03:07.0")
+# Encoder 1 ("ivtv[0246]")
+# video0
+#
+ATTR{name}=="ivtv[0246] encoder MPG", KERNELS=="0000:03:07.0", NAME="video0"
+ATTR{name}=="ivtv[0246] encoder VBI", KERNELS=="0000:03:07.0", NAME="vbi0"
+ATTR{name}=="ivtv[0246] encoder PCM", KERNELS=="0000:03:07.0", NAME="video24"
+ATTR{name}=="ivtv[0246] encoder YUV", KERNELS=="0000:03:07.0", NAME="video32"
+ATTR{name}=="ivtv[0246] encoder radio", KERNELS=="0000:03:07.0", NAME="radio0"
+
+#
+# Hauppauge PVR500
+# PCI Slot (KERNELS=="0000:03:07.0")
+# Encoder 2 ("ivtv[1357]")
+# video1
+#
+ATTR{name}=="ivtv[1357] encoder MPG", KERNELS=="0000:03:07.0", NAME="video1"
+ATTR{name}=="ivtv[1357] encoder VBI", KERNELS=="0000:03:07.0", NAME="vbi1"
+ATTR{name}=="ivtv[1357] encoder PCM", KERNELS=="0000:03:07.0", NAME="video25"
+ATTR{name}=="ivtv[1357] encoder YUV", KERNELS=="0000:03:07.0", NAME="video33"
+
+#
+# Hauppauge PVR500
+# PCI Slot (KERNELS=="0000:03:06.0")
+# Encoder 1 ("ivtv[0246]")
+# video2
+#
+ATTR{name}=="ivtv[0246] encoder MPG", KERNELS=="0000:03:06.0", NAME="video2"
+ATTR{name}=="ivtv[0246] encoder VBI", KERNELS=="0000:03:06.0", NAME="vbi2"
+ATTR{name}=="ivtv[0246] encoder PCM", KERNELS=="0000:03:06.0", NAME="video26"
+ATTR{name}=="ivtv[0246] encoder YUV", KERNELS=="0000:03:06.0", NAME="video34"
+ATTR{name}=="ivtv[0246] encoder radio", KERNELS=="0000:03:06.0", NAME="radio2"
+
+#
+# Hauppauge PVR500
+# PCI Slot (KERNELS=="0000:03:06.0")
+# Encoder 2 ("ivtv[1357]")
+# video3
+#
+ATTR{name}=="ivtv[1357] encoder MPG", KERNELS=="0000:03:06.0", NAME="video3"
+ATTR{name}=="ivtv[1357] encoder VBI", KERNELS=="0000:03:06.0", NAME="vbi3"
+ATTR{name}=="ivtv[1357] encoder PCM", KERNELS=="0000:03:06.0", NAME="video27"
+ATTR{name}=="ivtv[1357] encoder YUV", KERNELS=="0000:03:06.0", NAME="video35"
+
+#
+# Hauppauge PVR500
+# PCI Slot (KERNELS=="0000:03:09.0")
+# Encoder 1 ("ivtv[0246]")
+# video4
+#
+ATTR{name}=="ivtv[0246] encoder MPG", KERNELS=="0000:03:09.0", NAME="video4"
+ATTR{name}=="ivtv[0246] encoder VBI", KERNELS=="0000:03:09.0", NAME="vbi4"
+ATTR{name}=="ivtv[0246] encoder PCM", KERNELS=="0000:03:09.0", NAME="video28"
+ATTR{name}=="ivtv[0246] encoder YUV", KERNELS=="0000:03:09.0", NAME="video36"
+ATTR{name}=="ivtv[0246] encoder radio", KERNELS=="0000:03:09.0", NAME="radio4"
+
+#
+# Hauppauge PVR500
+# PCI Slot (KERNELS=="0000:03:09.0")
+# Encoder 2 ("ivtv[1357]")
+# video5
+#
+ATTR{name}=="ivtv[1357] encoder MPG", KERNELS=="0000:03:09.0", NAME="video5"
+ATTR{name}=="ivtv[1357] encoder VBI", KERNELS=="0000:03:09.0", NAME="vbi5"
+ATTR{name}=="ivtv[1357] encoder PCM", KERNELS=="0000:03:09.0", NAME="video29"
+ATTR{name}=="ivtv[1357] encoder YUV", KERNELS=="0000:03:09.0", NAME="video37"

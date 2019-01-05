@@ -1,0 +1,12 @@
+#
+# DVico FusionHDTV 5 Lite
+# Assign to adapter0
+# Ignore the video0 and related devices, as it doesn't have a hardware MPEG encoder and
+# may confuse programs that assume it does.
+#
+KERNEL=="dvb[0-9].demux0", ATTRS{subsystem_vendor}=="0x18ac", ATTRS{subsystem_device}=="0xd500", NAME="dvb/adapter0/demux0"
+KERNEL=="dvb[0-9].dvr0", ATTRS{subsystem_vendor}=="0x18ac", ATTRS{subsystem_device}=="0xd500", NAME="dvb/adapter0/dvr0"
+KERNEL=="dvb[0-9].frontend0", ATTRS{subsystem_vendor}=="0x18ac", ATTRS{subsystem_device}=="0xd500", NAME="dvb/adapter0/frontend0"
+KERNEL=="dvb[0-9].net0", ATTRS{subsystem_vendor}=="0x18ac", ATTRS{subsystem_device}=="0xd500", NAME="dvb/adapter0/net0"
+KERNEL=="video[1-9]", ATTRS{subsystem_vendor}=="0x18ac", ATTRS{subsystem_device}=="0xd500", ATTR{dev}=="81:*", OPTIONS+="ignore_device"
+KERNEL=="vbi[0-9]", ATTRS{subsystem_vendor}=="0x18ac", ATTRS{subsystem_device}=="0xd500", ATTR{dev}=="81:*", OPTIONS+="ignore_device"

@@ -1,0 +1,27 @@
+#
+# Hauppauge HDPVR Example
+#
+# Set idProduct to the correct Product ID for your device
+# as there are multiple IDs for the HDPVR line.
+# Use "lsusb | grep 2040" to show all Hauppauge devices.
+# Use the 4 digit hex value.
+#
+# Set iSerial to the serial number for your device.
+# Use "lsusb -d 2040: -v | grep iSerial" to show the
+# serial numbers for all Hauppauge devices. Use only the
+# last 8 hex digits.
+#
+
+#
+# Hauppauge HDPVR
+# USB Bus
+# Assign to video0
+#
+SUBSYSTEM=="usb", ATTR{idProduct}=="4903", ATTRS{idVendor}=="2040", ATTR{iSerial}=="00112233", NAME="video0"
+
+#
+# Hauppauge HDPVR
+# USB Bus
+# Assign to video1
+#
+SUBSYSTEM=="usb", ATTR{idProduct}=="4900", ATTRS{idVendor}=="2040", ATTR{iSerial}=="44556677", NAME="video1"

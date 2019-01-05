@@ -1,0 +1,17 @@
+#
+# pcHDTV 5500 Example
+# Assign to adapter0
+# Ignore the video0 and related devices, as it doesn't have a hardware MPEG encoder and
+# may confuse programs that assume it does.
+#
+KERNEL=="dvb[0-9].demux0", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", NAME="dvb/adapter0/demux0"
+KERNEL=="dvb[0-9].dvr0", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", NAME="dvb/adapter0/dvr0"
+KERNEL=="dvb[0-9].frontend0", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", NAME="dvb/adapter0/frontend0"
+KERNEL=="dvb[0-9].net0", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", NAME="dvb/adapter0/net0"
+ATTR{name}=="*video*pcHDTV HD5500*", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", OPTIONS+="ignore_device"
+ATTR{name}=="*vbi*pcHDTV HD5500*", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", OPTIONS+="ignore_device"
+KERNEL=="audio[0-9]", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", OPTIONS+="ignore_device"
+KERNEL=="mixer[0-9]", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", OPTIONS+="ignore_device"
+KERNEL=="dsp[0-9]", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", OPTIONS+="ignore_device"
+KERNEL=="pcm*", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", OPTIONS+="ignore_device"
+KERNEL=="control*", ATTRS{subsystem_vendor}=="0x7063", ATTRS{subsystem_device}=="0x5500", OPTIONS+="ignore_device"

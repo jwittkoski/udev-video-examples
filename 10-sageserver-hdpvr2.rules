@@ -1,0 +1,7 @@
+#
+# Hauppauge HDPVR2 Example
+# USB Bus
+# Always put device in 'video' group (or any group the user using the HDPVR2 is a member of).
+# Note: HDPVR2 devices do not show up as /dev/videoX or /dev/dvb/adapterX devices.
+#
+SUBSYSTEM=="usb", ATTR{idProduct}=="e505", ATTRS{idVendor}=="2040", MODE="0660", GROUP="video"
