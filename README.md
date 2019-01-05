@@ -15,5 +15,4 @@ For most of these examples you'll need to tweak them for your own setup. You'll 
 * What parameters to use to identify your computer's PCI Slots
 * Serial numbers for your device
 
-The rules files (with your customizations) should be placed in `/etc/udev/rules.d`. I name it
-`10-sageserver-video-devices.rules` but the anything formateed as `XX-DESCRIPTION.rules` should work.
+The rules files (with your customizations) should be placed in `/etc/udev/rules.d`.
