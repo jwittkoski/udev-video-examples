@@ -16,3 +16,9 @@ For most of these examples you'll need to tweak them for your own setup. You'll 
 * Serial numbers for your device
 
 The rules files (with your customizations) should be placed in `/etc/udev/rules.d`.
+
+Multiple files can be used together but you **will** need to adjust the device name numbering,
+as the examples all default to starting with the 0th device. That is, `video0` can only be used once,
+so if you use multiple files that assign `video0` you'll need to renumber all except one of them.
+Be especially careful if you renumber the PVR-500 device names, as the PCM and YUV encoder
+number for each device isn't always obvious.
