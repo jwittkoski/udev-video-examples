@@ -1,8 +1,19 @@
 # udev-video-examples
 
-Examples of udev rules for video capture devices. I have used these for my SageTV setup, but they can be used for any purpose.
+Examples of udev rules for video capture devices. I have used these for my SageTV setup, but they are not specific
+to SageTV and could be used as examples for other systems.
 
-Most of these rules were to make sure that the same video capture card appeared as the same video device under Linux every time.
+Most of these rules were to make sure that the same video capture card appeared as the same video device under Linux after every boot.
 This was important because I was using something other than the card itself (a IR blaster to a STB) to tune channels.
-I needed to make sure the Video Source in SageTV (which corresponded to the Linux device) was matched to the correct
+I needed to make sure the defined "Video Source" in SageTV (which corresponded to the Linux device) was matched to the correct
 IR blaster.
+
+In some cases it was challenging to find a unique udev parameter to identify each device. For the multiple PVR-500s
+I had to map them based on PCI slots (using the KERNELS parameter) which required some experimentation.
+
+For most of these examples you'll need to tweak them for your own setup. You'll likely have to determine and update the examples with one or following for your own setup:
+* What parameters to use to identify your computer's PCI Slots
+* Serial numbers for your device
+
+The rules files (with your customizations) should be placed in `/etc/udev/rules.d`. I name it
+`10-sageserver-video-devices.rules` but the anything formateed as `XX-DESCRIPTION.rules` should work.
